@@ -35,4 +35,10 @@ public class Bolo extends Lanche {
 	public int calculaTempoEntrega(int distancia) {
 		return super.calculaTempoEntrega(distancia) + tempoPreparo;
 	}
+
+	@Override
+	public String toString() {
+		return "Bolo {\n\tmassa = " + massa + ",\n\trecheio = " + recheio + ",\n\tcobertura = " + cobertura + "\n\t}";
+	}
+	
 }

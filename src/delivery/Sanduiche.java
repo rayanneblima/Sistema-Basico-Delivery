@@ -12,10 +12,25 @@ public class Sanduiche extends Lanche {
 		this.ingredientes = ingredientes;
 	}
 	
+	public String imprimirIngredientes() {
+		String ingredientesEscolhidos = "";
+		for(int i = 0; i < getIngredientes().length; i++) {
+			if(getIngredientes()[i].equals("0")) {
+				return ingredientesEscolhidos;
+			}
+			ingredientesEscolhidos += "\n\t" + getIngredientes()[i];
+		}
+		return ingredientesEscolhidos;
+	}
+ 
 	@Override
 	public int calculaTempoEntrega(int distancia) {
 		return super.calculaTempoEntrega(distancia) + tempoPreparo;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Sanduiche {ingredientes = " + imprimirIngredientes() + "\n\t}";
+	}
+
 }

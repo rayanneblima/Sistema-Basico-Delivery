@@ -92,6 +92,7 @@ public class Programa {
 		cobertura = teclado.next();
 		lanche.setCobertura(cobertura);
 		
+		System.out.println("\n\tPedido: " + lanche.toString() + "\n\n");
 		System.out.println("Agora informe a distância em km até o local de entrega: "); 
 		int distancia = teclado.nextInt();
 		System.out.println("\tProcessando o pedido...");
@@ -117,7 +118,7 @@ public class Programa {
 		molho = teclado.next();
 		lanche.setMolho(molho);
 		
-		
+		System.out.println("\n\tPedido: " + lanche.toString() + "\n\n");
 		System.out.println("Agora informe a distância em km até o local de entrega: "); 
 		int distancia = teclado.nextInt();
 		System.out.println("\tProcessando o pedido...");
@@ -137,7 +138,7 @@ public class Programa {
 	}
 	
 	public static void menuSanduiche(Sanduiche lanche) throws Exception {
-	  	String[] ingredientes = new String[10];
+		String[] ingredientes = new String[10];
 		int i = 0;
 		
 		 do {
@@ -152,7 +153,10 @@ public class Programa {
 			i++;
 		} while(i < 10 && !ingredientes[i-1].equals("0"));
 		 
+		
 		lanche.setIngredientes(ingredientes);
+		System.out.println("\n\tPedido: " + lanche.toString() + "\n\n");
+		
 		System.out.println("Agora informe a distância em km até o local de entrega: "); 
 		int distancia = teclado.nextInt();
 		System.out.println("\tProcessando o pedido...");
