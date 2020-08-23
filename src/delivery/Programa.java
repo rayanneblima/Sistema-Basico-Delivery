@@ -27,12 +27,25 @@ public class Programa {
 		if(opcao == 1) {
 			System.out.println("\nAcertou em cheio pedindo um sanduíche hoje ein!");
 			lanche = new Sanduiche();
-			System.out.println("Agora só falta escolher os ingredientes do seu lanche....");
+			System.out.println("Agora só falta escolher os ingredientes do seu sanduíche....");
 			menuSanduiche((Sanduiche) lanche); // casting 
 		}
 		
+//		if(opcao == 2) {
+//			System.out.println("\nAcertou em cheio pedindo uma massa hoje ein!");
+//			lanche = new Sanduiche();
+//			System.out.println("Agora só falta escolher os ingredientes da sua massa....");
+//			menuSanduiche((Sanduiche) lanche); // casting 
+//		}
 		
+		if(opcao == 3) {
+			System.out.println("\nAcertou em cheio pedindo um bolo hoje ein!");
+			lanche = new Bolo();
+			System.out.println("Agora só falta escolher os ingredientes do seu bolo....");
+			menuBolo((Bolo) lanche); // casting 
+		}
 		
+	
 	}
 	
 	public static void menuSanduiche(Sanduiche lanche) throws Exception {
@@ -69,7 +82,8 @@ public class Programa {
 		TimeUnit.SECONDS.sleep(2);
 		System.out.println(" 100%");
 		TimeUnit.SECONDS.sleep(2);
-		System.out.println("\tO pedido irá chegar em " + lanche.calculaTempoEntrega(distancia) + " minutos.\n");
+		System.out.println("\tO lanche escolhido foi: Sanduiche " + lanche.getIngredientes().toString());
+		System.out.println("\n\tO pedido irá chegar em " + lanche.calculaTempoEntrega(distancia) + " minutos.\n");
 		System.out.println("\tAgradecemos pela compra =)\n\n");
 		System.out.println("\t ----------FINALIZADO----------");
 	}
